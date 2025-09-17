@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio - T. Radhakrishnan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    header { padding: 15px; background: #0f172a; color: white; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    nav a:hover, nav a.active { color: #38bdf8; }
+    .resume-container { text-align: center; margin-top: 30px; display: none; }
+    .resume-container img { max-width: 90%; height: auto; border: 1px solid #ccc; border-radius: 8px; }
+    .resume-container a { display: inline-block; margin: 15px; padding: 10px 20px; background: #38bdf8; color: #fff; text-decoration: none; border-radius: 6px; }
+    .resume-container a:hover { background: #0ea5e9; }
+    button { padding: 10px 20px; border: none; border-radius: 6px; background: #38bdf8; color: white; cursor: pointer; font-size: 1rem; }
+    button:hover { background: #0ea5e9; }
+    .container { text-align: center; padding: 20px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="brand">T. Radhakrishnan</div>
+    <nav>
+      <a href="index.html" class="active">About</a>
+      <a href="skills.html">Skills</a>
+      <!-- Projects link directly to OneDrive Excel file -->
+      <a href="https://1drv.ms/x/c/d72893cbbcda4a03/Efw1-_6BFFZPn3PDnE4ucjgBKbJtzhduk49XNpwAa9wX1Q?e=J30nif" target="_blank">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <!-- Portfolio Heading -->
+  <section class="container">
+    <h1 style="font-size:2.5rem; margin-bottom:10px; color:#38bdf8;">
+      My Professional Portfolio
+    </h1>
+    <p style="color:#94a3b8; font-size:1.1rem;">
+      Showcasing my journey as a <strong>Business & Data Analyst</strong>
+    </p>
+  </section>
+
+  <!-- About Section -->
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I am <strong>T. Radhakrishnan</strong>, a passionate and detail-oriented
+      <strong>B.Tech (Information Technology)</strong> graduate with a strong
+      interest in <strong>Business & Data Analytics</strong>.
+    </p>
+    <p>
+      My goal is to transform raw data into meaningful insights that help
+      organizations make informed decisions. With proficiency in data
+      visualization, statistical analysis, and problem-solving, I strive to
+      bridge the gap between business needs and data-driven solutions.
+    </p>
+
+    <!-- Resume Button -->
+    <div style="margin-top:20px;">
+      <button onclick="showResume()">📄 View My Resume</button>
+    </div>
+
+    <!-- Projects Button -->
+    <div style="margin-top:20px;">
+      <a href="https://1drv.ms/x/c/d72893cbbcda4a03/Efw1-_6BFFZPn3PDnE4ucjgBKbJtzhduk49XNpwAa9wX1Q?e=J30nif" target="_blank">
+        <button>📊 See My Projects</button>
+      </a>
+    </div>
+  </div>
+
+  <!-- Resume Section (hidden until button click) -->
+  <div id="resume" class="resume-container">
+    <h2>My Resume</h2>
+    <img src="resume_page-0001.jpg" alt="Resume of T. Radhakrishnan">
+    <br>
+    <a href="resume_page-0001.jpg" download>⬇ Download Resume</a>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align:center; margin-top:20px;">
+    © <span id="year"></span> T. Radhakrishnan — Portfolio
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function showResume() {
+      document.getElementById("resume").style.display = "block";
+      window.location.hash = "resume"; // scroll to resume section
+    }
+  </script>
+</body>
+</html>

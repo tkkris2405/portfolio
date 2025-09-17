@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Projects - T. Radhakrishnan</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+    header { padding: 15px; background: #0f172a; color: white; display: flex; justify-content: space-between; align-items: center; }
+    nav a { color: white; margin: 0 10px; text-decoration: none; }
+    nav a:hover, nav a.active { color: #38bdf8; }
+    .container { padding: 40px; }
+    a.project-link { 
+      display: inline-block; 
+      margin-top: 20px; 
+      padding: 12px 20px; 
+      background: #38bdf8; 
+      color: white; 
+      text-decoration: none; 
+      border-radius: 6px; 
+      font-weight: bold;
+    }
+    a.project-link:hover { background: #0ea5e9; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="brand">T. Radhakrishnan</div>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="resume.html">Resume</a>
+    </nav>
+  </header>
+
+  <!-- Projects Section -->
+  <div class="container">
+    <h1>My Projects</h1>
+    <p>Click below to view my Excel project:</p>
+    <a class="project-link" 
+       href="https://1drv.ms/x/c/d72893cbbcda4a03/Efw1-_6BFFZPn3PDnE4ucjgBKbJtzhduk49XNpwAa9wX1Q?e=J30nif" 
+       target="_blank">
+       📊 Open Student Dashboard (Excel)
+    </a>
+  </div>
+
+  <!-- Footer -->
+  <footer style="text-align:center; margin-top:40px;">
+    © <span id="year"></span> T. Radhakrishnan — Portfolio
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
